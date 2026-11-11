@@ -1,0 +1,165 @@
++ unzip -q -o '*.zip'
++ export JAVA_HOME=/usr/lib/jvm/temurin-17-jdk-amd64
++ JAVA_HOME=/usr/lib/jvm/temurin-17-jdk-amd64
++ export PATH=/usr/lib/jvm/temurin-17-jdk-amd64/bin:/snap/bin:/home/runner/.local/bin:/opt/pipx_bin:/home/runner/.cargo/bin:/home/runner/.config/composer/vendor/bin:/usr/local/.ghcup/bin:/home/runner/.dotnet/tools:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
++ PATH=/usr/lib/jvm/temurin-17-jdk-amd64/bin:/snap/bin:/home/runner/.local/bin:/opt/pipx_bin:/home/runner/.cargo/bin:/home/runner/.config/composer/vendor/bin:/usr/local/.ghcup/bin:/home/runner/.dotnet/tools:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
++ export ANDROID_HOME=/usr/local/lib/android/sdk
++ ANDROID_HOME=/usr/local/lib/android/sdk
++ SDKM=/usr/local/lib/android/sdk/cmdline-tools/latest/bin/sdkmanager
++ yes
++ /usr/local/lib/android/sdk/cmdline-tools/latest/bin/sdkmanager --licenses
+yes: standard output: Broken pipe
++ true
++ /usr/local/lib/android/sdk/cmdline-tools/latest/bin/sdkmanager 'platforms;android-36' 'build-tools;35.0.0'
++ curl -sSL -o gradle.zip https://services.gradle.org/distributions/gradle-8.13-bin.zip
++ unzip -q -o gradle.zip -d /home/runner/work/_temp
++ cd maazar-play/android
++ /home/runner/work/_temp/gradle-8.13/bin/gradle assembleDiretoRelease assembleLojaRelease bundleLojaRelease --no-daemon --stacktrace
+
+Welcome to Gradle 8.13!
+
+Here are the highlights of this release:
+ - Daemon JVM auto-provisioning
+ - Enhancements for Scala plugin and JUnit testing
+ - Improvements for build authors and plugin developers
+
+For more details see https://docs.gradle.org/8.13/release-notes.html
+
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.13/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDiretoReleaseBuild UP-TO-DATE
+> Task :app:mergeDiretoReleaseJniLibFolders
+> Task :app:mergeDiretoReleaseNativeLibs NO-SOURCE
+> Task :app:stripDiretoReleaseDebugSymbols NO-SOURCE
+> Task :app:extractDiretoReleaseNativeSymbolTables NO-SOURCE
+> Task :app:mergeDiretoReleaseNativeDebugMetadata NO-SOURCE
+> Task :app:generateDiretoReleaseBuildConfig
+> Task :app:javaPreCompileDiretoRelease
+> Task :app:checkDiretoReleaseDuplicateClasses
+> Task :app:checkDiretoReleaseAarMetadata
+> Task :app:processDiretoReleaseNavigationResources
+> Task :app:generateDiretoReleaseResValues
+> Task :app:compileDiretoReleaseNavigationResources
+> Task :app:mapDiretoReleaseSourceSetPaths
+> Task :app:generateDiretoReleaseResources
+> Task :app:packageDiretoReleaseResources
+> Task :app:mergeDiretoReleaseResources
+> Task :app:createDiretoReleaseCompatibleScreenManifests
+> Task :app:extractDeepLinksDiretoRelease
+> Task :app:parseDiretoReleaseLocalResources
+> Task :app:processDiretoReleaseMainManifest
+> Task :app:processDiretoReleaseManifest
+> Task :app:mergeDiretoReleaseStartupProfile
+> Task :app:desugarDiretoReleaseFileDependencies
+> Task :app:mergeDiretoReleaseArtProfile
+> Task :app:mergeDiretoReleaseShaders
+> Task :app:processDiretoReleaseManifestForPackage
+> Task :app:mergeExtDexDiretoRelease
+> Task :app:compileDiretoReleaseShaders NO-SOURCE
+> Task :app:generateDiretoReleaseAssets UP-TO-DATE
+> Task :app:mergeDiretoReleaseAssets
+> Task :app:compressDiretoReleaseAssets
+> Task :app:extractDiretoReleaseVersionControlInfo
+> Task :app:processDiretoReleaseJavaRes NO-SOURCE
+> Task :app:processDiretoReleaseResources
+> Task :app:mergeDiretoReleaseJavaResource
+
+> Task :app:compileDiretoReleaseJavaWithJavac
+Note: /home/runner/work/maazar-play/maazar-play/maazar-play/android/app/src/main/java/com/maazar/play/MainActivity.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :app:dexBuilderDiretoRelease
+> Task :app:mergeDiretoReleaseGlobalSynthetics
+> Task :app:collectDiretoReleaseDependencies
+> Task :app:sdkDiretoReleaseDependencyData
+> Task :app:validateSigningDiretoRelease
+> Task :app:writeDiretoReleaseAppMetadata
+> Task :app:writeDiretoReleaseSigningConfigVersions
+> Task :app:preLojaReleaseBuild UP-TO-DATE
+> Task :app:mergeLojaReleaseJniLibFolders
+> Task :app:mergeLojaReleaseNativeLibs NO-SOURCE
+> Task :app:stripLojaReleaseDebugSymbols NO-SOURCE
+> Task :app:extractLojaReleaseNativeSymbolTables NO-SOURCE
+> Task :app:mergeLojaReleaseNativeDebugMetadata NO-SOURCE
+> Task :app:optimizeDiretoReleaseResources
+> Task :app:checkLojaReleaseDuplicateClasses
+> Task :app:generateLojaReleaseBuildConfig
+> Task :app:javaPreCompileLojaRelease
+> Task :app:checkLojaReleaseAarMetadata
+> Task :app:processLojaReleaseNavigationResources
+> Task :app:compileLojaReleaseNavigationResources
+> Task :app:generateLojaReleaseResValues
+> Task :app:mapLojaReleaseSourceSetPaths
+> Task :app:generateLojaReleaseResources
+> Task :app:packageLojaReleaseResources
+> Task :app:createLojaReleaseCompatibleScreenManifests
+> Task :app:extractDeepLinksLojaRelease
+> Task :app:processLojaReleaseMainManifest
+> Task :app:processLojaReleaseManifest
+> Task :app:parseLojaReleaseLocalResources
+> Task :app:processLojaReleaseManifestForPackage
+> Task :app:desugarLojaReleaseFileDependencies
+> Task :app:mergeLojaReleaseStartupProfile
+> Task :app:mergeLojaReleaseResources
+> Task :app:mergeLojaReleaseArtProfile
+> Task :app:mergeLojaReleaseShaders
+> Task :app:compileLojaReleaseShaders NO-SOURCE
+> Task :app:generateLojaReleaseAssets UP-TO-DATE
+> Task :app:mergeDexDiretoRelease
+> Task :app:mergeLojaReleaseAssets
+> Task :app:processLojaReleaseResources
+> Task :app:compileDiretoReleaseArtProfile
+> Task :app:compressLojaReleaseAssets
+
+> Task :app:compileLojaReleaseJavaWithJavac
+Note: /home/runner/work/maazar-play/maazar-play/maazar-play/android/app/src/main/java/com/maazar/play/MainActivity.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :app:mergeExtDexLojaRelease
+> Task :app:dexBuilderLojaRelease
+> Task :app:extractLojaReleaseVersionControlInfo
+> Task :app:mergeLojaReleaseGlobalSynthetics
+> Task :app:processLojaReleaseJavaRes NO-SOURCE
+> Task :app:mergeLojaReleaseJavaResource
+> Task :app:collectLojaReleaseDependencies
+> Task :app:sdkLojaReleaseDependencyData
+> Task :app:validateSigningLojaRelease
+> Task :app:writeLojaReleaseAppMetadata
+> Task :app:writeLojaReleaseSigningConfigVersions
+> Task :app:processApplicationManifestLojaReleaseForBundle
+> Task :app:optimizeLojaReleaseResources
+> Task :app:configureLojaReleaseDependencies
+> Task :app:parseLojaReleaseIntegrityConfig
+> Task :app:packageDiretoRelease
+> Task :app:createDiretoReleaseApkListingFileRedirect
+> Task :app:assembleDiretoRelease
+> Task :app:bundleLojaReleaseResources
+> Task :app:mergeDexLojaRelease
+> Task :app:buildLojaReleasePreBundle
+> Task :app:compileLojaReleaseArtProfile
+> Task :app:packageLojaReleaseBundle
+> Task :app:packageLojaRelease
+> Task :app:createLojaReleaseApkListingFileRedirect
+> Task :app:assembleLojaRelease
+> Task :app:signLojaReleaseBundle
+> Task :app:produceLojaReleaseBundleIdeListingFile
+> Task :app:createLojaReleaseBundleListingFileRedirect
+> Task :app:bundleLojaRelease
+
+[Incubating] Problems report is available at: file:///home/runner/work/maazar-play/maazar-play/maazar-play/android/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.13/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 1m 41s
+91 actionable tasks: 91 executed
++ cp app/build/outputs/apk/direto/release/app-direto-release.apk ../../Maazar-Play.apk
++ cp app/build/outputs/apk/loja/release/app-loja-release.apk ../../Maazar-Play-Lojas.apk
++ cp app/build/outputs/bundle/lojaRelease/app-loja-release.aab ../../Maazar-Play-GooglePlay.aab
++ cd ../..
++ set +x
+AVISO: secrets MAAZAR_KEYSTORE_BASE64 / MAAZAR_KEYSTORE_PASSWORD não configurados; o .aab ficou com a chave de teste.
